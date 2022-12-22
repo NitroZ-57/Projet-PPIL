@@ -4,7 +4,7 @@
 
 
 
-# PROTOCOLE 
+## PROTOCOLE 
 
 1. **Introduction** 
 Chaque *Forme* sera envoyé via le protcole fait pour, ces formes seront envoyées avec leurs coordonées mondes. L'origine d'une *Forme* représentant les coordonnées mondes représente les coordonées du **premier point**. Les valeurs numériques seront toutes des valeurs flotantes (à virgule). Ainsi dans le protocole si l'on veut donner le vecteur (5, 6) on donnera en réalité 5.0 et 6.0. 
