@@ -16,7 +16,7 @@ Ensuite pour les formes simples, il y aura un espace, suivi des de l'origine des
 
 3. **Segment**  
 Un segment aura d'abord son nom, puis les coordonées mondes, puis le vecteur associé au segment.   
-Exemple : le segment de coordonée monde (1.5,2) et de vecteur (3.2,5) :
+Exemple : le segment de coordonée monde (1.5,2) et de vecteur (3.2,5) :  
 `segment (1.5,2.0) (3.2,5.0) ;`
 
 4. **Cercle**  
