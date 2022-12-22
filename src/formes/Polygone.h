@@ -6,6 +6,7 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
+class VisiteurForme;
 using namespace std;
 
 class Polygone : public Forme {
@@ -24,7 +25,9 @@ public:
 
     operator string () const;
 
-}; // Segment
+    const Forme accepte(const VisiteurForme* visiteurForme);
+
+}; // Polygone
 
 inline ostream& operator << (ostream & os, const Polygone& polygone) {
     return os << (string)polygone;

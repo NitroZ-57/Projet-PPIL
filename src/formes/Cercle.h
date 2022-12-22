@@ -5,6 +5,7 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
+class VisiteurForme;
 using namespace std;
 
 class Cercle : public Forme {
@@ -22,7 +23,9 @@ public:
 
     operator string () const;
 
-}; // Segment
+    const Forme accepte(const VisiteurForme* visiteurForme);
+
+}; // Cercle
 
 inline ostream& operator << (ostream & os, const Cercle& cercle) {
     return os << (string)cercle;

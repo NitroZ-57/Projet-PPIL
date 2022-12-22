@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+
+class VisiteurForme;
 using namespace std;
 
 class Forme {
@@ -27,6 +29,8 @@ public:
     bool estDansUnGroupe() const;
 
     operator string () const;
+
+    const Forme accepte(const VisiteurForme* visiteurForme);
 
 }; // Forme
 

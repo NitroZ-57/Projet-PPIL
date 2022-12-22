@@ -5,6 +5,7 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
+class VisiteurForme;
 using namespace std;
 
 class Triangle : public Forme {
@@ -25,7 +26,9 @@ public:
 
     operator string () const;
 
-}; // Segment
+    const Forme accepte(const VisiteurForme* visiteurForme);
+
+}; // Triangle
 
 inline ostream& operator << (ostream & os, const Triangle& triangle) {
     return os << (string)triangle;

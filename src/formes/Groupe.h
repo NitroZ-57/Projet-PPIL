@@ -6,6 +6,7 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
+class VisiteurForme;
 using namespace std;
 
 class Groupe : public Forme {
@@ -24,7 +25,9 @@ public:
 
     operator string () const;
 
-}; // Segment
+    const Forme accepte(const VisiteurForme* visiteurForme);
+
+}; // Groupe
 
 inline ostream& operator << (ostream & os, const Groupe& groupe) {
     return os << (string)groupe;

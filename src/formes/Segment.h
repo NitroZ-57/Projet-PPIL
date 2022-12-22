@@ -5,6 +5,7 @@
 #include "Vecteur2D.h"
 #include "Forme.h"
 
+class VisiteurForme;
 using namespace std;
 
 class Segment : public Forme {
@@ -21,6 +22,8 @@ public:
     Vecteur2D getSegment() const;
 
     operator string () const;
+
+    const Forme accepte(const VisiteurForme* visiteurForme);
 
 }; // Segment
 
