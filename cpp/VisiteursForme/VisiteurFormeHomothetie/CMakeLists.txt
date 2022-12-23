@@ -1,0 +1,2 @@
+add_library(VisiteurFormeHomothetie VisiteurFormeHomothetie.cpp VisiteurFormeHomothetie.h)
+target_include_directories(VisiteurFormeHomothetie PUBLIC .)

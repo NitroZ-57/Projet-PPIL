@@ -1,0 +1,2 @@
+add_library(VisiteurFormeMatrice VisiteurFormeMatrice.cpp VisiteurFormeMatrice.h)
+target_include_directories(VisiteurFormeMatrice PUBLIC .)

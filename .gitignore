@@ -34,9 +34,9 @@
 # VS Files
 *.sln
 *.vcxproj
-*.vcxproj.filers
+*.vcxproj.filters
 *.vcxproj.user
 cpp/.vs/*
 
 # Tests Files
-test.cpp
+test.*

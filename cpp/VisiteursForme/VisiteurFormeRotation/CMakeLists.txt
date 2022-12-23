@@ -1,0 +1,2 @@
+add_library(VisiteurFormeRotation VisiteurFormeRotation.cpp VisiteurFormeRotation.h)
+target_include_directories(VisiteurFormeRotation PUBLIC .)
