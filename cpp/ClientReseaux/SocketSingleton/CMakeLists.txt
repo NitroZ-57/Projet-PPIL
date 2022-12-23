@@ -1,0 +1,2 @@
+add_library(SocketSingleton SocketSingleton.cpp SocketSingleton.h)
+target_include_directories(SocketSingleton PUBLIC .)

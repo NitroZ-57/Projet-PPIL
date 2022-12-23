@@ -1,0 +1,2 @@
+add_library(SocketException SocketException.cpp SocketException.h)
+target_include_directories(SocketException PUBLIC .)

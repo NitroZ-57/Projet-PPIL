@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# VS Files
+*.sln
+*.vcxproj
+*.vcxproj.filers
+*.vcxproj.user
+cpp/.vs/*
+
+# Tests Files
+test.cpp
