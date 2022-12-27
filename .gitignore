@@ -44,3 +44,4 @@ test.*
 # IJ Files
 java/java.iml
 java/.idea/*
+java/out/*
