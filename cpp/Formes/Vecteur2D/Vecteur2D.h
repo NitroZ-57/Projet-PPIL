@@ -2,7 +2,6 @@
 #include <sstream>
 #include <string>
 #include <iostream>
-#include "AlgebreLineaire.h"
 
 using namespace std;
 
@@ -17,7 +16,7 @@ public:
 
     operator string () const {
         ostringstream os;
-        os << "(" << x << ", " << y << ")";
+        os << "(" << x << "," << y << ")";
         return os.str();
     }
 

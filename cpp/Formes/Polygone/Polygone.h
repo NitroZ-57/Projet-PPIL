@@ -3,8 +3,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Vecteur2D.h"
-#include "Forme.h"
+#include "../Vecteur2D/Vecteur2D.h"
+#include "../Forme/Forme.h"
 
 class VisiteurForme;
 using namespace std;
@@ -16,12 +16,12 @@ private:
 
 public:
 
-    Polygone(const string& couleur);
-    virtual ~Polygone();
+    Polygone(const string& couleur, const Vecteur2D& origine);
+    virtual ~Polygone(){};
 
-    void add(const Vecteur2D& vecteur);
+    void ajouter(const Vecteur2D& vecteur);
     Vecteur2D get(int index) const;
-    void remove(const Vecteur2D* vecteur);
+    void retirer(const Vecteur2D* vecteur);
 
     operator string () const;
 

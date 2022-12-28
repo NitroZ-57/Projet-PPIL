@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <string>
-#include "Vecteur2D.h"
-#include "Forme.h"
+#include "../Vecteur2D/Vecteur2D.h"
+#include "../Forme/Forme.h"
 
 class VisiteurForme;
 using namespace std;
@@ -11,15 +11,15 @@ using namespace std;
 class Cercle : public Forme {
 
 private:
-    Vecteur2D centre;
+    Vecteur2D rayon;
 
 public:
 
-    Cercle(const string& couleur, const Vecteur2D& vecteur);
-    virtual ~Cercle();
+    Cercle(const string& couleur, const Vecteur2D& rayon, const Vecteur2D origine);
+    virtual ~Cercle(){};
 
-    void setCentre(const Vecteur2D& vecteur);
-    Vecteur2D getCentre() const;
+    void setRayon(const Vecteur2D& rayon);
+    Vecteur2D getRayon() const;
 
     operator string () const;
 

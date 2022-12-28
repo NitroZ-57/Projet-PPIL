@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <string>
-#include "Vecteur2D.h"
-#include "Forme.h"
+#include "../Vecteur2D/Vecteur2D.h"
+#include "../Forme/Forme.h"
 
 class VisiteurForme;
 using namespace std;
@@ -16,8 +16,8 @@ private:
 
 public:
 
-    Triangle(const string& couleur, const Vecteur2D& cote1, const Vecteur2D& cote2);
-    virtual ~Triangle();
+    Triangle(const string& couleur, const Vecteur2D& cote1, const Vecteur2D& cote2, const Vecteur2D& origine);
+    virtual ~Triangle(){};
 
     void setCote1(const Vecteur2D& cote1);
     void setCote2(const Vecteur2D& cote2);

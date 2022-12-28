@@ -16,8 +16,8 @@ class SocketException: public std::exception {
     char* _message; /**< le message à afficher */
 public:
     explicit SocketException(const char* arg_message);
-    ~SocketException() _NOEXCEPT override;
-    const char *what() const _NOEXCEPT override;
+    ~SocketException() override;
+    const char *what() const override;
     explicit operator std::string() const;
     friend std::iostream& operator<<(std::iostream& o, const SocketException& e);
 };
