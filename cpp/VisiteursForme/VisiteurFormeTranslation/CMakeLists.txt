@@ -1,2 +1,0 @@
-add_library(VisiteurFormeTranslation VisiteurFormeTranslation.cpp VisiteurFormeTranslation.h)
-target_include_directories(VisiteurFormeTranslation PUBLIC .)
