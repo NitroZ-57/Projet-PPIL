@@ -62,12 +62,12 @@ Vecteur2D Groupe::getRectangleHD() const {
     return max;
 }
 
-Forme* Groupe::getTransformation(const CoordMonde& c) const {
-    Groupe *g = new Groupe(getIntCouleur());
+void Groupe::getTransformation(const CoordMonde& c) {
+    
     for (vector<Forme*>::const_iterator it = formes.begin(); it != formes.end(); it++) {
-        g->ajouter((*it)->getTransformation(c));
+        (*it)->getTransformation(c);
     }
-    return (Forme*)g;
+    
 }
 
 void Groupe::homothetie(const Vecteur2D& o, const double& k) {

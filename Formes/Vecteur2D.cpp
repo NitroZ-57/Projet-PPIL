@@ -2,7 +2,6 @@
 
 #include <math.h>
 
-// (x, y)
 Vecteur2D* Vecteur2D::creerString(char* v) {
 
     double a, b;

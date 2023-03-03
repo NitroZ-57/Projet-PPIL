@@ -30,7 +30,7 @@ Forme* SauvegardeTxtCORPolygone::sousLire(const char* msg) const
 			v.push_back(*point);
 
 			nxtStr = strtok(nullptr, ";");
-
+			delete point;
 		}
 		delete msg2;
 		return (Forme*)new Polygone(couleur, v);

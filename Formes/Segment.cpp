@@ -47,10 +47,9 @@ Vecteur2D Segment::getRectangleHD() const {
     return Vecteur2D(x, y);
 }
 
-Forme* Segment::getTransformation(const CoordMonde& c) const {
-    Vecteur2D o2 = c.transformer(getOrigine());
-    Vecteur2D s2 = c.transformer(segment);
-    return (Forme*)new Segment(getIntCouleur(), o2, s2);
+void Segment::getTransformation(const CoordMonde& c) {
+    setOrigine(c.transformer(getOrigine()));
+    segment = c.transformer(segment);
 }
 
 void Segment::homothetie(const Vecteur2D& o, const double& k) {

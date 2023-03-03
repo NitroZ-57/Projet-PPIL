@@ -15,7 +15,7 @@ const WinsocketLib* WinsocketLib::DEMARRER() {
 	
 	int err = WSAStartup(MAKEWORD(2, 0), &d);
 	if (err)
-		throw new QExceptionsReseaux(err, "erreur wsa startup");
+		throw new QExceptionsStartUp("erreur wsa startup");
 	
 	singleton = new WinsocketLib();
 	return singleton;

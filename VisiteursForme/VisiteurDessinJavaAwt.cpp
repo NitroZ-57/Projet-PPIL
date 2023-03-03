@@ -22,3 +22,15 @@ bool VisiteurDessinJavaAwt::dessine(const Polygone* polygone) const {
 bool VisiteurDessinJavaAwt::dessine(const Groupe* groupe) const {
 	return dessine((Forme*)(groupe));
 }
+bool VisiteurDessinJavaAwt::dessine(const vector<Forme*>& formes) const {
+	bool reussite = false;
+	for (vector<Forme*>::const_iterator it = formes.begin(); it != formes.end(); it++) {
+		reussite = dessine(*it) || reussite;
+	}
+	return reussite;
+}
+
+bool VisiteurDessinJavaAwt::finDessin() const {
+	sock->write("end", 3);
+	return true;
+}

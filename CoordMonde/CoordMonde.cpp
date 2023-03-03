@@ -24,6 +24,10 @@ void CoordMonde::calculerRect(const vector<Forme*>& v) {
 		Vecteur2D HD2 = (*it)->getRectangleHD();
 		Vecteur2D BG2 = (*it)->getRectangleBG();
 
+		cout << HD2 << endl;
+		cout << BG2 << endl; 
+		cout << endl;
+
 		if (HD2.x > HD1.x)
 			HD1.x = HD2.x;
 		if (HD2.y > HD1.y)
@@ -35,8 +39,8 @@ void CoordMonde::calculerRect(const vector<Forme*>& v) {
 			BG1.y = BG2.y;
 	}
 
-	P1 = Vecteur2D(HD1.x, HD1.y);
-	P2 = Vecteur2D(BG1.x, BG1.y);
+	P1 = Vecteur2D(HD1.x+10, HD1.y+10);
+	P2 = Vecteur2D(BG1.x-10, BG1.y-10);
 
 }
 
@@ -72,7 +76,6 @@ double CoordMonde::calculerE2() const {
 void CoordMonde::calculerAB() {
 	Vecteur2D C = (P1 + P2) * 0.5;
 	Vecteur2D Cprime = (P1prime + P2prime) * 0.5;
-	cout << "C" << C << endl << "C'" << Cprime << endl;
 	ab = Cprime - lambda * C;
 
 }
@@ -81,3 +84,10 @@ void CoordMonde::calculerAB() {
 Vecteur2D CoordMonde::transformer(const Vecteur2D& v) const {
 	return v * lambda + ab;
 }
+
+void CoordMonde::transformer(vector<Forme*>& formes) const {
+	for (vector<Forme*>::iterator it = formes.begin(); it != formes.end(); it++) {
+		(*it)->getTransformation(*this);
+	}
+}
+

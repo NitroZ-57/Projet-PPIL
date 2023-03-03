@@ -29,10 +29,9 @@ Vecteur2D Cercle::getRectangleBG() const {
     double y = getOrigine().y - rayon.y;
     return Vecteur2D(x, y);
 }
-Forme* Cercle::getTransformation(const CoordMonde& c) const {
-    Vecteur2D o2 = c.transformer(getOrigine());
-    Vecteur2D r2 = c.transformer(rayon);
-    return (Forme*) new Cercle(getIntCouleur(), o2, r2);
+void Cercle::getTransformation(const CoordMonde& c) {
+    setOrigine(c.transformer(getOrigine()));
+    rayon = c.transformer(rayon);
 }
 void Cercle::homothetie(const Vecteur2D& o, const double& k) {
     Vecteur2D inter = (1 - k) * o;
@@ -41,12 +40,10 @@ void Cercle::homothetie(const Vecteur2D& o, const double& k) {
 }
 void Cercle::translation(const Vecteur2D& v) {
     setOrigine(getOrigine() + v);
-    setRayon(getRayon() + v);
 }
 void Cercle::rotation(const Vecteur2D& o, const double& a) {
     Vecteur2D rot = Vecteur2D::creerPolaire(a);
     setOrigine((rot ^ (getOrigine() - o)) + o);
-    setRayon((rot ^ (getRayon() - o)) + o);
 }
 
 double Cercle::getAire() const {

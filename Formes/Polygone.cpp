@@ -85,12 +85,12 @@ Vecteur2D Polygone::getRectangleHD() const {
     return Vecteur2D(xMax, yMax);
 }
 
-Forme* Polygone::getTransformation(const CoordMonde& c) const {
-    vector<Vecteur2D> v;
-    for (vector<Vecteur2D>::const_iterator it = points.begin(); it != points.end(); it++) {
-        v.push_back(c.transformer(*it));
+void Polygone::getTransformation(const CoordMonde& c) {
+
+    for (vector<Vecteur2D>::iterator it = points.begin(); it != points.end(); it++) {
+        (*it) = c.transformer((*it));
     }
-    return (Forme*) new Polygone(getIntCouleur(), v);
+
 }
 
 void Polygone::homothetie(const Vecteur2D& o, const double& k) {

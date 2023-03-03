@@ -9,7 +9,12 @@ SauvegardeTxt::SauvegardeTxt() {
 }
 
 void SauvegardeTxt::setNomFichier(const char* nomFichier) {
-	this->nomFichier = nomFichier;
+	this->nomFichier = _strdup(nomFichier);
+}
+
+SauvegardeTxt::~SauvegardeTxt() {
+	if (nomFichier != nullptr)
+		delete nomFichier;
 }
 
 Forme*& SauvegardeTxt::lire() const

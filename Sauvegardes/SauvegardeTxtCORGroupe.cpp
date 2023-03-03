@@ -43,7 +43,6 @@ Forme* SauvegardeTxtCORGroupe::sousLire(const char* msg) const
 		}
 
 
-
 		delete msg2;
 		return grp;
 

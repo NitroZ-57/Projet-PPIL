@@ -1,0 +1,1 @@
+groupe[jaune; cercle[noir; (100, 100); 282]; segment[bleu; (3, 140); (120, 3)]; polygone[rouge; (120, 120); (400, 100); (500, 200); (450, 400); (50, 300); ]; groupe[noir; segment[vert; (3, 3); (120, 140)]; ]; ];
